@@ -13,10 +13,10 @@ const LibraryCards = async () => {
     console.log(cards);
     return (
 
-        <div className='flex flex-col justify-start container mx-auto'>
+        <div className='flex flex-col justify-start container mx-auto p-4'>
             <h2 className='font-black text-2xl'>THE LIBRARY</h2>
-            <p className='text-gray-500'>Twelve lifts covering every major muscle group.</p>
-            <div className='grid grid-cols-3 gap-4 container mx-auto'>
+            <p className='text-gray-500 mb-8'>Twelve lifts covering every major muscle group.</p>
+            <div className='grid grid-cols-3 gap-8 container mx-auto'>
                 {
                     cards.map(card => <Card key={card.id} card={card}></Card>)
                 }
