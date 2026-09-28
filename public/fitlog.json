@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Barbell Bench Press",
-    "image": "https://img.magnific.com/free-photo/portrait-anime-character-doing-fitness-exercising_23-2151666664.jpg?w=740",
+    "image": "/assets/1.avif",
     "muscleGroups": [
       "Chest",
       "Arms"
@@ -25,7 +25,7 @@
   {
     "id": 2,
     "name": "Pull-Up",
-    "image": "https://img.magnific.com/free-photo/3d-cartoon-fitness-man_23-2151691400.jpg?w=740",
+    "image": "/assets/2.avif",
     "muscleGroups": [
       "Back",
       "Arms"
@@ -48,7 +48,7 @@
   {
     "id": 3,
     "name": "Back Squat",
-    "image": "https://img.magnific.com/free-photo/3d-cartoon-fitness-man_23-2151691401.jpg?w=740",
+    "image": "/assets/3.avif",
     "muscleGroups": [
       "Legs",
       "Core"
@@ -71,7 +71,7 @@
   {
     "id": 4,
     "name": "Overhead Press",
-    "image": "https://img.magnific.com/free-photo/portrait-anime-character-doing-fitness-exercising_23-2151666703.jpg?w=740",
+    "image": "/assets/4.avif",
     "muscleGroups": [
       "Shoulders",
       "Arms"
@@ -94,7 +94,7 @@
   {
     "id": 5,
     "name": "Dumbbell Bicep Curl",
-    "image": "https://img.magnific.com/free-photo/portrait-anime-character-doing-fitness-exercising_23-2151666702.jpg?w=740",
+    "image": "/assets/5.avif",
     "muscleGroups": [
       "Arms"
     ],
@@ -116,7 +116,7 @@
   {
     "id": 6,
     "name": "Hollow-Body Plank",
-    "image": "https://img.magnific.com/free-photo/3d-cartoon-fitness-man_23-2151691489.jpg?w=740",
+    "image": "/assets/6.avif",
     "muscleGroups": [
       "Core"
     ],
@@ -138,7 +138,7 @@
   {
     "id": 7,
     "name": "Burpee",
-    "image": "https://img.magnific.com/free-photo/3d-cartoon-business-character_1048-16544.jpg?w=740",
+    "image": "/assets/7.avif",
     "muscleGroups": [
       "Full Body"
     ],
@@ -160,7 +160,7 @@
   {
     "id": 8,
     "name": "Conventional Deadlift",
-    "image": "https://img.magnific.com/free-photo/portrait-anime-character-doing-fitness-exercising_23-2151666704.jpg?w=740",
+    "image": "/assets/8.avif",
     "muscleGroups": [
       "Back",
       "Legs"
@@ -183,7 +183,7 @@
   {
     "id": 9,
     "name": "Push-Up",
-    "image": "https://img.magnific.com/free-photo/3d-cartoon-fitness-man_23-2151691429.jpg?w=740",
+    "image": "/assets/9.avif",
     "muscleGroups": [
       "Chest",
       "Arms",
@@ -207,7 +207,7 @@
   {
     "id": 10,
     "name": "Walking Lunge",
-    "image": "https://img.magnific.com/free-photo/portrait-anime-character-doing-fitness-exercising_23-2151666701.jpg?w=740",
+    "image": "/assets/10.avif",
     "muscleGroups": [
       "Legs"
     ],
@@ -229,7 +229,7 @@
   {
     "id": 11,
     "name": "Russian Twist",
-    "image": "https://img.magnific.com/free-photo/3d-cartoon-fitness-man_23-2151691487.jpg?w=740",
+    "image": "/assets/11.avif",
     "muscleGroups": [
       "Core"
     ],
@@ -251,7 +251,7 @@
   {
     "id": 12,
     "name": "Kettlebell Swing",
-    "image": "https://img.magnific.com/free-photo/3d-cartoon-fitness-man_23-2151691505.jpg?w=740",
+    "image": "/assets/12.avif",
     "muscleGroups": [
       "Full Body",
       "Shoulders"
