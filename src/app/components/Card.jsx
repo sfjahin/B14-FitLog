@@ -4,10 +4,10 @@ import React from 'react';
 
 const Card = ({ card }) => {
     return (
-        <div>
-            <Image
+        <div className='flex flex-col'>
+            <Image className='w-full h-64 object-cover object-center' 
                 src={card.image}
-                height={200}
+                height={300}
                 width={300}
                 alt={card.name}
             />
