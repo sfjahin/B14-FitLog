@@ -13,7 +13,7 @@ const LibraryCards = async () => {
     console.log(cards);
     return (
 
-        <div className='flex flex-col justify-start container mx-auto p-4'>
+        <div className='flex flex-col justify-start container mx-auto p-4 m-8'>
             <h2 className='font-black text-2xl'>THE LIBRARY</h2>
             <p className='text-gray-500 mb-8'>Twelve lifts covering every major muscle group.</p>
             <div className='grid grid-cols-3 gap-8 container mx-auto'>
