@@ -23,7 +23,6 @@ const Card = ({ card }) => {
                         ))
                     }
                 </div>
-
                 <div>
                     <h2 className='text-xl font-bold'>{card.name}</h2>
                 </div>
