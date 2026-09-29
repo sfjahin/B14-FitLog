@@ -1,11 +1,16 @@
+'use client';
+
+import Link from 'next/link';
 import React from 'react';
+import { usePathname } from 'next/navigation';
 
 
 const Tab = () => {
+    const pathname = usePathname();
     return (
-        <div role="tablist" className="tabs tabs-box bg-transparent border-transparent">
-            <a role="tab" className="tab tab-active bg-[#1A2312] rounded-full text-green-500">Workouts</a>
-            <a role="tab" className="tab text-gray-500">My Plan</a>
+        <div role="tablist" className="tabs bg-transparent flex items-center">
+            <Link href="/" role="tab" className={`tab ${ pathname === '/' ? 'tab-active bg-[#1A2312] text-green-500' : '' } rounded-full text-gray-500`}>Workouts</Link>
+            <Link href="/my-plan" role="tab" className={`tab ${ pathname === '/my-plan' ? 'tab-active bg-[#1A2312] text-green-500' : '' } rounded-full text-gray-500`}>My Plan</Link>
         </div>
     );
 };

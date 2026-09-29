@@ -2,14 +2,14 @@ import React from 'react';
 
 const Counter = () => {
     return (
-        <div className='flex gap-2 items-center'>
-            <p>Plan</p>
-            <div className='w-8 h-8 rounded-full bg-green-500 flex items-center justify-center'>
-                0
+        <div className='flex items-center gap-3 text-sm font-medium text-[#e8edf3]'>
+            <span className='text-[#c8ced7]'>Plan</span>
+            <div className='flex h-8 w-8 items-center justify-center rounded-full bg-green-500 text-xs font-black text-[#0d1117]'>
+                2
             </div>
-            <p>Saved</p>
-            <div className='w-8 h-8 rounded-full border-2 border-gray-500 flex items-center justify-center'>
-                0
+            <span className='text-[#c8ced7]'>Saved</span>
+            <div className='flex h-8 w-8 items-center justify-center rounded-full border border-[#3b434d] bg-transparent text-xs font-black text-[#e8edf3]'>
+                2
             </div>
         </div>
     );

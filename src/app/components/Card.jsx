@@ -3,11 +3,12 @@ import { Clock9 } from 'lucide-react';
 import { Flame } from 'lucide-react';
 import { Star } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const Card = ({ card }) => {
     return (
-        <div className='flex flex-col bg-[#15171D] rounded-2xl'>
+        <Link href={`/excercise/${card.id}`} className='flex flex-col bg-[#15171D] rounded-2xl'>
             <Image className='w-full h-64 object-cover object-center rounded-t-2xl'
                 src={card.image}
                 height={300}
@@ -47,7 +48,7 @@ const Card = ({ card }) => {
             </div>
 
 
-        </div>
+        </Link>
     );
 };
 

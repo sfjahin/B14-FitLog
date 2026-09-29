@@ -1,5 +1,6 @@
 import { Bookmark, SquarePlus } from 'lucide-react';
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
 import React from 'react';
 
 const getExerciseDetails = async () => {
@@ -12,7 +13,12 @@ const getExerciseDetails = async () => {
 const ExerciseDetails = async ({ params }) => {
     const { id } = await params;
     const exerciseData = await getExerciseDetails();
-    console.log(id);
+    const exercise = exerciseData.find((item) => String(item.id) === id);
+
+    if (!exercise) {
+        notFound();
+    }
+
     return (
         <div className="container mx-auto p-4 my-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
@@ -21,8 +27,8 @@ const ExerciseDetails = async ({ params }) => {
                 <div className="w-full h-[600px]">
                     <Image
                         className="w-full h-full rounded-2xl object-cover"
-                        src={exerciseData[id].image}
-                        alt={exerciseData[id].name}
+                        src={exercise.image}
+                        alt={exercise.name}
                         width={800}
                         height={1200}
                     />
@@ -32,13 +38,13 @@ const ExerciseDetails = async ({ params }) => {
                 <div className="w-full flex flex-col gap-4 p-4">
 
                     <h1 className="text-3xl font-bold">
-                        {exerciseData[id].name}
+                        {exercise.name}
                     </h1>
 
-                    <p>{exerciseData[id].description}</p>
+                    <p>{exercise.description}</p>
 
                     <div className="flex flex-wrap gap-2 mt-2">
-                        {exerciseData[id].muscleGroups.map((muscle, index) => (
+                        {exercise.muscleGroups.map((muscle, index) => (
                             <span
                                 key={index}
                                 className="text-black text-md px-4 py-1 bg-green-500 rounded-full"
@@ -52,49 +58,49 @@ const ExerciseDetails = async ({ params }) => {
 
                         <div className="flex justify-between items-center">
                             <p>EQUIPMENT</p>
-                            <p>{exerciseData[id].equipment}</p>
+                            <p>{exercise.equipment}</p>
                         </div>
 
                         <hr className="my-4 text-gray-800" />
 
                         <div className="flex justify-between items-center">
                             <p>DIFFICULTY</p>
-                            <p>{exerciseData[id].difficulty}</p>
+                            <p>{exercise.difficulty}</p>
                         </div>
 
                         <hr className="my-4 text-gray-800" />
 
                         <div className="flex justify-between items-center">
                             <p>SETS</p>
-                            <p>{exerciseData[id].sets}</p>
+                            <p>{exercise.sets}</p>
                         </div>
 
                         <hr className="my-4 text-gray-800" />
 
                         <div className="flex justify-between items-center">
                             <p>REPS</p>
-                            <p>{exerciseData[id].reps}</p>
+                            <p>{exercise.reps}</p>
                         </div>
 
                         <hr className="my-4 text-gray-800" />
 
                         <div className="flex justify-between items-center">
                             <p>DURATION</p>
-                            <p>{exerciseData[id].duration} mins</p>
+                            <p>{exercise.duration} mins</p>
                         </div>
 
                         <hr className="my-4 text-gray-800" />
 
                         <div className="flex justify-between items-center">
                             <p>CALORIES</p>
-                            <p>{exerciseData[id].calories} kcal</p>
+                            <p>{exercise.calories} kcal</p>
                         </div>
 
                         <hr className="my-4 text-gray-800" />
 
                         <div className="flex justify-between items-center">
                             <p>RATING</p>
-                            <p>{exerciseData[id].rating}</p>
+                            <p>{exercise.rating}</p>
                         </div>
 
                     </div>
@@ -104,7 +110,7 @@ const ExerciseDetails = async ({ params }) => {
                     </h2>
 
                     <div>
-                        {exerciseData[id].instructions.map((step, index) => (
+                        {exercise.instructions.map((step, index) => (
                             <p key={index}>
                                 {index + 1}. {step}
                             </p>
