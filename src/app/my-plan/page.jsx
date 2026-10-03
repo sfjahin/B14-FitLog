@@ -1,7 +1,13 @@
+'use client';
+
 import Link from 'next/link';
-import React from 'react';
+import React, { useContext } from 'react';
+import { PlansContext } from '../context/PlansContext';
 
 const MyPlanPage = () => {
+    const { plans, savedPlans } = useContext(PlansContext);
+    console.log(plans);
+    console.log(savedPlans);
     return (
         <main className="flex-1 px-6 pb-10 pt-8 text-white md:px-8">
             <div className="mx-auto max-w-6xl">
@@ -21,8 +27,8 @@ const MyPlanPage = () => {
                         </p>
                         <div className="mt-7 flex items-center justify-start">
                             <span className="text-[4rem] font-black leading-none tracking-[-0.06em] text-green-500 md:text-[4.5rem]">
-                                2
-                            </span> 
+                                {plans.length}
+                            </span>
                         </div>
                     </div>
 
@@ -31,7 +37,7 @@ const MyPlanPage = () => {
                             Minutes
                         </p>
                         <div className="mt-7 text-[4rem] font-black leading-none tracking-[-0.06em] text-white md:text-[4.5rem]">
-                            23
+                            {plans.reduce((total, exercise) => total + exercise.duration, 0)}
                         </div>
                     </div>
 
@@ -40,7 +46,7 @@ const MyPlanPage = () => {
                             Calories
                         </p>
                         <div className="mt-7 text-[4rem] font-black leading-none tracking-[-0.06em] text-white md:text-[4.5rem]">
-                            190
+                            {plans.reduce((total, exercise) => total + exercise.caloriesBurned, 0)}
                         </div>
                     </div>
                 </section>

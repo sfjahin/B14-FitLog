@@ -3,6 +3,7 @@ import "./globals.css";
 import Nav from "./Nav";
 import Banner from "./components/Banner";
 import Footer from "./Footer";
+import PlansContextPage from "./context/PlansContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,10 +28,12 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Nav></Nav>
-        {children}
-        <Footer></Footer>
-        </body>
+        <PlansContextPage>
+          <Nav></Nav>
+          {children}
+          <Footer></Footer>
+        </PlansContextPage>
+      </body>
     </html>
   );
 }

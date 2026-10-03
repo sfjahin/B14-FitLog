@@ -1,7 +1,9 @@
+import SaveForLaterButton from '@/app/components/SaveForLaterButton';
+import TodaysPlanButton from '@/app/components/TodaysPlanButton';
 import { Bookmark, SquarePlus } from 'lucide-react';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import React from 'react';
+import React, { useContext } from 'react';
 
 const getExerciseDetails = async () => {
     const res = await fetch('https://api.abcz.workers.dev/api/fitlog');
@@ -93,7 +95,7 @@ const ExerciseDetails = async ({ params }) => {
 
                         <div className="flex justify-between items-center">
                             <p>CALORIES</p>
-                            <p>{exercise.calories} kcal</p>
+                            <p>{exercise.caloriesBurned} kcal</p>
                         </div>
 
                         <hr className="my-4 text-gray-800" />
@@ -118,15 +120,8 @@ const ExerciseDetails = async ({ params }) => {
                     </div>
 
                     <div className="flex flex-col md:flex-row gap-4 p-4">
-                        <button className="bg-green-500 text-black px-4 py-2 rounded-full flex items-center gap-2">
-                            <SquarePlus />
-                            Add to today's plan
-                        </button>
-
-                        <button className="border-2 border-gray-500 text-gray-500 px-4 py-2 rounded-full flex items-center gap-2">
-                            <Bookmark />
-                            Save for later
-                        </button>
+                        <TodaysPlanButton exercise={exercise} />
+                        <SaveForLaterButton exercise={exercise} />
                     </div>
 
                 </div>
